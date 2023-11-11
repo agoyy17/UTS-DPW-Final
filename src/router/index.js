@@ -9,23 +9,17 @@ import DetailUser from '../views/user/detail'
 
 // Product
 import Product from '../views/product/list'
-
-import Catalog from '../views/index'
-import Cart from '../views/cart'
-
+import AddProduct from '../views/product/add'
+import EditProduct from '../views/product/edit'
+import DetailProduct from '../views/product/detail'
 Vue.use(Router)
 
 export default new Router({
 	routes: [
 		{
 			path: '/',
-			name: 'catalog',
-			component: Catalog
-		},
-		{
-			path: '/cart',
-			name: 'cart',
-			component: Cart
+			name: 'list-user',
+			component: User
 		},
 		{
 			path: '/list-user',
@@ -48,9 +42,29 @@ export default new Router({
 			component: DetailUser
 		},
 		{
+			path: '/',
+			name: 'list-product',
+			component: Product
+		},
+		{
 			path: '/list-product',
 			name: 'list-product',
 			component: Product
+		},
+		{
+			path: '/add-product',
+			name: 'add-product',
+			component: AddProduct
+		},
+		{
+			path: '/edit-product/:id',
+			name: 'edit-product',
+			component: EditProduct
+		},
+		{
+			path: '/detail-product/:id',
+			name: 'detail-product',
+			component: DetailProduct
 		}
 	]
 })
