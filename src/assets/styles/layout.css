@@ -180,3 +180,6 @@
 .right{
     text-align: right;
 }
+.text-muted {
+    opacity: 0.65;
+}
